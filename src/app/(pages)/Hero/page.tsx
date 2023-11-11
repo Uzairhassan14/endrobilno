@@ -3,6 +3,9 @@ import Navbar from "@/app/_component/navbar/nabar";
 import Footer from "@/app/_component/footer/footer";
 import Image from "next/image";
 import mainCar from "@/app/_component/assets/main-car.png";
+import SmallCard from "@/app/_component/carsCards/smallCard";
+import LargeCard from "@/app/_component/carsCards/largeCard";
+
 const page = () => {
   return (
     <section className="flex flex-col justify-between  min-h-screen">
@@ -15,7 +18,7 @@ const page = () => {
             alt="main-car"
           />
         </div>
-        <div>
+        {/* <div>
           <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-gray-50 py-6 sm:py-12">
             <div className="relative bg-white px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:max-w-lg sm:rounded-lg sm:px-10">
               <div className="mx-auto max-w-md">
@@ -30,9 +33,25 @@ const page = () => {
               </div>
             </div>
           </div>
-        </div>
+          
+        </div> */}
       </header>
-      <div className=" contents"></div>
+      <section>
+        <div className="flex justify-between ">
+          <aside className="w-1/3"></aside>
+          <div className=" w-9/12 flex flex-col">
+            <div className="flex gap-3  justify-between items-baseline">
+              <SmallCard />
+              <SmallCard />
+              <SmallCard />
+            </div>
+            <div>
+              <LargeCard />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer className="bg-[#003087] w-full">
         <Footer />
       </footer>

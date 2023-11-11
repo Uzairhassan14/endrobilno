@@ -146,7 +146,7 @@ const footer = () => {
           <h1 className=" text-[1.8rem]  xl:text-[2rem] flex  lg:justify-end mb-2  gap-2 font-lora not-italic text-white font-semibold leading-noraml">
             Let's connect
           </h1>
-          <div className="flex justify-between sm:justify-start sm:gap-4 shrink-0 align-middle">
+          <div className="flex justify-between sm:justify-start sm:gap-4 shrink-0 align-middle xl:justify-end">
             <div className="">
               <Facebook />
             </div>
@@ -164,7 +164,7 @@ const footer = () => {
               <Youtube />
             </div>
           </div>
-          <div className="flex mt-12 flex-wrap sm:flex-nowrap">
+          <div className="flex mt-12 flex-wrap sm:flex-nowrap xl:justify-end">
             <Image src={AppStore} alt="AppStore" />
             <Image src={Googleplay} alt="Googleplay" />
           </div>
