@@ -22,7 +22,7 @@ const footer = () => {
           </h1>
           <div className="flex flex-row flex-wrap gap-2 justify-center sm:justify-start sm:flex-row  sm:flex-wrap   mt-14">
             <Button title={"Audi A4"} />
-            <Button title={"Valkswagen"} />
+            <Button title={"Volkswagen"} />
             <Button title={"Skota Octavia"} />
             <Button title={"BMW 5 Series"} />
             <Button title={"Faint Punto"} />
@@ -169,7 +169,7 @@ const footer = () => {
             <Image src={Googleplay} alt="Googleplay" />
           </div>
         </div>
-        <Secloter />
+        {/* <Secloter /> */}
       </div>
       <div className="px-12 sm:px-24">
         <hr className="my-5 " />

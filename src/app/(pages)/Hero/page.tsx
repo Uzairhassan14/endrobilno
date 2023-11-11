@@ -5,6 +5,7 @@ import Image from "next/image";
 import mainCar from "@/app/_component/assets/main-car.png";
 import SmallCard from "@/app/_component/carsCards/smallCard";
 import LargeCard from "@/app/_component/carsCards/largeCard";
+import Tab from "@/app/_component/tabs";
 
 const page = () => {
   return (
@@ -37,7 +38,7 @@ const page = () => {
         </div> */}
       </header>
       <section>
-        <div className="flex justify-between ">
+        {/* <div className="flex justify-between ">
           <aside className="w-1/3"></aside>
           <div className=" w-9/12 flex flex-col">
             <div className="flex gap-3  justify-between items-baseline">
@@ -49,7 +50,8 @@ const page = () => {
               <LargeCard />
             </div>
           </div>
-        </div>
+        </div> */}
+        <Tab />
       </section>
 
       <footer className="bg-[#003087] w-full">
