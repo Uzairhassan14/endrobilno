@@ -5,28 +5,28 @@ import RedCra32 from "@/app/_component/assets/redCra32.png";
 
 const largeCard = () => {
   return (
-    <div className=" rounded-lg my-2 shadow-sm bg-white p-1 border-slate-300 border px-3 shadow-indigo-100 w-full flex">
+    <div className=" rounded-[5px] my-2 shadow-sm bg-white p-1 border-slate-300 border px-3 shadow-indigo-100 w-full flex">
       <div className="flex flex-col">
         <Image
           alt="Home"
           src={RedCra32}
-          className="h-auto w-96 rounded-md object-cover rotate-90"
+          className="h-auto w-96 rounded-[5px] object-cover rotate-90"
         />
         <div className="flex flex-row gap-5">
           <Image
             alt="Home"
             src={RedCra32}
-            className="h-auto w-20 rounded-md object-cover rotate-90"
+            className="h-auto w-20 rounded-[5px] object-cover rotate-90"
           />
           <Image
             alt="Home"
             src={RedCra32}
-            className="h-auto w-20 rounded-md object-cover rotate-90"
+            className="h-auto w-20 rounded-[5px] object-cover rotate-90"
           />
           <Image
             alt="Home"
             src={RedCra32}
-            className="h-auto w-20 rounded-md object-cover rotate-90"
+            className="h-auto w-20 rounded-[5px] object-cover rotate-90"
           />
         </div>
       </div>
@@ -119,13 +119,13 @@ const largeCard = () => {
 
         <div className="mt-6  flex flex-row justify-between w-full">
           <div className="grid grid-cols-3 gap-3">
-            <div className="bg-[#00308726] py-2 px-3  rounded-md text-center text-[#003087] text-base">
+            <div className="bg-[#00308726] py-2 px-3  rounded-[5px] text-center text-[#003087] text-base">
               Damaged
             </div>
-            <div className="bg-[#00308726] py-2 px-3  rounded-md text-center text-[#003087] text-base">
+            <div className="bg-[#00308726] py-2 px-3  rounded-[5px] text-center text-[#003087] text-base">
               (Not)Registered
             </div>
-            <div className="bg-[#00308726] py-2 px-3  rounded-md text-center text-[#003087] text-base">
+            <div className="bg-[#00308726] py-2 px-3  rounded-[5px] text-center text-[#003087] text-base">
               Guarantee
             </div>
           </div>

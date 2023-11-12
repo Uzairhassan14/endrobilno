@@ -228,7 +228,10 @@ const Navbar = () => {
         >
           {/* Your menu items */}
           <li>
-            <Link className="hover:text-gray-500 gap-2 flex" href="#">
+            <Link
+              href="/CarsDetails"
+              className="hover:text-gray-500 gap-2 flex"
+            >
               Search
               <Downarrow />
             </Link>

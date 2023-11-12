@@ -1,85 +1,65 @@
-"use client";
-
-import React, { useEffect, useState } from "react";
-import { AiOutlineSearch } from "react-icons/ai";
+import React, { useState } from "react";
 import Arrowdown from "./Iicon/Arrowdown";
 
-interface Country {
-  name: string;
+interface SecloterProps {
+  options: string[];
+  selectedItem: string | null;
+  defaultoption: string;
+  onItemSelect: (item: string) => void;
 }
 
-const Secloter: React.FC = () => {
-  const [countries, setCountries] = useState<Country[] | null>(null);
-  const [inputValue, setInputValue] = useState<string>("");
-  const [selected, setSelected] = useState<string>("");
+const Secloter: React.FC<SecloterProps> = ({
+  options,
+  selectedItem,
+  defaultoption,
+  onItemSelect,
+}) => {
   const [open, setOpen] = useState<boolean>(false);
 
-  useEffect(() => {
-    fetch("https://restcountries.com/v2/all?fields=name")
-      .then((res) => res.json())
-      .then((data: Country[]) => {
-        setCountries(data);
-      });
-  }, []);
+  const handleToggleDropdown = () => {
+    setOpen(!open);
+  };
+
+  const handleItemClick = (item: string) => {
+    onItemSelect(item);
+    setOpen(false);
+  };
 
   return (
-    <div className="w-72 font-medium h-80">
+    <div className="w-full font-medium h-auto">
       <div
-        onClick={() => setOpen(!open)}
-        className={`bg-white w-full ps-3 flex items-center justify-between border-2 border-[#B8B8B8]  rounded-lg ${
-          !selected && "text-gray-700"
+        onClick={handleToggleDropdown}
+        className={` bg-white w-full ps-3 text-sm flex items-center justify-between border border-[#B8B8B8] rounded-xl ${
+          !selectedItem ? "text-gray-700" : ""
         }`}
       >
-        {selected
-          ? selected?.length > 25
-            ? selected?.substring(0, 25) + "..."
-            : selected
-          : "Select Country"}
+        {selectedItem
+          ? selectedItem.length > 25
+            ? selectedItem.substring(0, 25) + "..."
+            : selectedItem
+          : `${defaultoption}`}
         <div
-          className={`${
+          className={`h-14 w-10 flex justify-center bg-[#b8b8b826]  text-[#444444]   border-l-[1px] border-[#B8B8B8] items-center rounded-xl m-[-2px] ${
             open && "rotate-180"
-          } h-14 w-14 flex justify-center  bg-[#b8b8b826] text-base  text-[#444444] border-2 border-[#B8B8B8]  items-center rounded-lg m-[-2px] `}
+          }`}
         >
           <Arrowdown />
         </div>
       </div>
       <ul
-        className={`bg-white mt-2 overflow-y-auto ${
+        className={`bg-white mt-2 overflow-y-auto rounded-[3px]  shadow-md ${
           open ? "max-h-60" : "max-h-0"
-        } `}
+        }`}
       >
-        <div className="flex items-center px-2 sticky top-0 bg-white">
-          <AiOutlineSearch size={18} className="text-gray-700" />
-          <input
-            type="text"
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value.toLowerCase())}
-            placeholder="Enter country name"
-            className="placeholder:text-gray-700 p-2 outline-none"
-          />
-        </div>
-        {countries?.map((country: Country) => (
+        {options.map((option) => (
           <li
-            key={country?.name}
-            className={`p-2 text-sm hover:bg-sky-600 hover:text-white
-            ${
-              country?.name?.toLowerCase() === selected?.toLowerCase() &&
-              "bg-sky-600 text-white"
-            }
-            ${
-              country?.name?.toLowerCase().startsWith(inputValue)
-                ? "block"
-                : "hidden"
-            }`}
-            onClick={() => {
-              if (country?.name?.toLowerCase() !== selected.toLowerCase()) {
-                setSelected(country?.name);
-                setOpen(false);
-                setInputValue("");
-              }
-            }}
+            key={option}
+            className={`p-2 text-sm hover:bg-sky-600 hover:text-white ${
+              option === selectedItem ? "bg-sky-600 text-white" : ""
+            } `}
+            onClick={() => handleItemClick(option)}
           >
-            {country?.name}
+            {option}
           </li>
         ))}
       </ul>

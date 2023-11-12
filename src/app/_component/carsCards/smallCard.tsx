@@ -4,11 +4,11 @@ import Car32 from "@/app/_component/assets/car-32.png";
 
 const smallCard = () => {
   return (
-    <div className="block rounded-lg m-2 shadow-sm bg-white shadow-indigo-100 w-80">
+    <div className="block rounded-[10px] m-2 shadow-sm bg-white shadow-indigo-100 w-80">
       <Image
         alt="Home"
         src={Car32}
-        className="h-56 w-full rounded-md object-cover"
+        className="h-56 w-full rounded-[10px] object-cover"
       />
 
       <div className="mt-3 px-4 pb-5">
