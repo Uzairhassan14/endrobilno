@@ -183,7 +183,7 @@ const detailSearch = () => {
         <Label htmlFor="" className="space-x-0   font-semibold text-[13px]  ">
           Transmission
         </Label>
-        <div className="w-full mt-3">
+        <div className="w-full mt-1">
           <Secloter
             options={options}
             selectedItem={selectedItem}
@@ -206,30 +206,34 @@ const detailSearch = () => {
           <Label htmlFor="" className="space-x-0   font-semibold text-[13px]  ">
             Range
           </Label>
-          <Secloter
-            options={options}
-            selectedItem={selectedItem}
-            defaultoption={"Diesel"}
-            onItemSelect={handleItemSelect}
-          />
+          <div className="mt-1">
+            <Secloter
+              options={options}
+              selectedItem={selectedItem}
+              defaultoption={"Diesel"}
+              onItemSelect={handleItemSelect}
+            />
+          </div>
         </div>
         <div className="w-[48%]">
           <Label htmlFor="" className="space-x-0   font-semibold text-[13px]  ">
             Charge time
           </Label>
-          <Secloter
-            options={options}
-            selectedItem={selectedItem}
-            defaultoption={"Coupe"}
-            onItemSelect={handleItemSelect}
-          />
+          <div className="mt-1">
+            <Secloter
+              options={options}
+              selectedItem={selectedItem}
+              defaultoption={"Coupe"}
+              onItemSelect={handleItemSelect}
+            />
+          </div>
         </div>
       </div>
       <div className=" ">
         <Label htmlFor="" className="space-x-0   font-semibold text-[13px]  ">
           Fast charge time
         </Label>
-        <div className="w-full mt-3">
+        <div className="w-full mt-1">
           <Secloter
             options={options}
             selectedItem={selectedItem}
@@ -243,12 +247,14 @@ const detailSearch = () => {
           <Label htmlFor="" className="space-x-0   font-semibold text-[13px]  ">
             Battery capacity
           </Label>
-          <Secloter
-            options={options}
-            selectedItem={selectedItem}
-            defaultoption={"From kWh"}
-            onItemSelect={handleItemSelect}
-          />
+          <div className="mt-1">
+            <Secloter
+              options={options}
+              selectedItem={selectedItem}
+              defaultoption={"From kWh"}
+              onItemSelect={handleItemSelect}
+            />
+          </div>
         </div>
         <div className="w-[48%]">
           <Label
@@ -257,12 +263,14 @@ const detailSearch = () => {
           >
             .
           </Label>
-          <Secloter
-            options={options}
-            selectedItem={selectedItem}
-            defaultoption={"Up to kWh"}
-            onItemSelect={handleItemSelect}
-          />
+          <div className="mt-1">
+            <Secloter
+              options={options}
+              selectedItem={selectedItem}
+              defaultoption={"Up to kWh"}
+              onItemSelect={handleItemSelect}
+            />
+          </div>
         </div>
       </div>
       <button className="text-[#EF2C2E] text-end underline  text-base ">

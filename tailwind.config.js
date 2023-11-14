@@ -2,11 +2,11 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   theme: {
     container: {
       center: true,
@@ -70,7 +70,12 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      fontFamily: {
+        Poppins: ["Poppins", "sans - serif"], // uncomment this line if you want to keep Poppins
+        Lato: ["Lato", "sans - serif"], // uncomment this line if you want to keep Lato
+        Lato: ["Lora", "serif"], // uncomment this line if you want to keep Lato
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

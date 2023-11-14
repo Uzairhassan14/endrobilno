@@ -15,7 +15,7 @@ import Secloter from "@/app/_component/footer/Secloter";
 const footer = () => {
   return (
     <>
-      <div className="px-12 lg:px-24  flex flex-wrap  justify-between mt-14  align-baseline ">
+      <div className="px-12 lg:px-24  flex flex-wrap  justify-between pt-14  align-baseline ">
         <div className="w-full md:w-1/2    lg:w-[44%] ">
           <h1 className="text-[1.8rem] xl:text-[2rem]   font-lora not-italic text-white font-semibold leading-noraml">
             The Most wanted makes and models
