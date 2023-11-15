@@ -192,6 +192,7 @@ import Bellicon from "@/app/_component/navbar/icons/bellicon";
 import Star from "@/app/_component/navbar/icons/star";
 import Message from "@/app/_component/navbar/icons/message";
 import Loginbtn from "@/app/_component/navbar/loginbtn";
+import { Cross } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -216,16 +217,37 @@ const Navbar = () => {
             onClick={toggleMenu}
           >
             {/* Your burger icon SVG */}
-            menu
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
           </button>
         </div>
+
         <ul
           className={`${
             isMenuOpen
-              ? "absolute flex justify-evenly flex-col items-center transition-all  left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto  lg:items-center lg:w-auto lg:space-x-6 w-full  bg-white min-h-[60vh] top-[235px] ms-[-0.5px]"
+              ? "absolute z-50 flex justify-center gap-8 flex-col items-center transition-all  left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto  lg:items-center lg:w-auto lg:space-x-6 w-full  bg-white min-h-[100vh] top-[207px] ms-[-0.5px]"
               : "hidden"
           } absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto  lg:items-center lg:w-auto lg:space-x-6 `}
         >
+          <button
+            className=" flex items-center lg:hidden text-blue-600 p-3 rotate-45"
+            onClick={toggleMenu}
+          >
+            {/* Your burger icon SVG */}
+            <Cross />
+          </button>
           {/* Your menu items */}
           <li>
             <Link
@@ -249,7 +271,7 @@ const Navbar = () => {
           <li>
             {isMenuOpen && (
               <>
-                <div className={``}>
+                <div className={`gap-4 flex flex-col`}>
                   <ul className="flex flex-row items-center gap-6">
                     <li>
                       <Link className="gap-1 flex" href="#">
@@ -267,33 +289,10 @@ const Navbar = () => {
                         <Message />
                       </Link>
                     </li>
-                    <li>
-                      <Link className="" href="#">
-                        <Loginbtn />
-                      </Link>
-                    </li>
                   </ul>
-                </div>
-                <div className="md:hidden">
-                  <button
-                    onClick={toggleMenu}
-                    className="block text-gray-500 hover:text-gray-700"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="h-6 w-6"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M4 6h16M4 12h16M4 18h16"
-                      />
-                    </svg>
-                  </button>
+                  <Link className="mt-2" href="#">
+                    <Loginbtn />
+                  </Link>
                 </div>
               </>
             )}

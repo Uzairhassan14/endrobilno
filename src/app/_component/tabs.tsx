@@ -23,11 +23,11 @@ const tabs = () => {
   };
   return (
     <Tabs
-      defaultValue="account"
-      className=" shadow-md m-5 md:mt-[-200px] border w-3/4 mx-auto bg-slate-100 mb-20"
+      defaultValue="Cars"
+      className=" shadow-md m-5  border w-3/4 mx-auto bg-slate-100 mb-20"
     >
-      <TabsList className=" h-15 p-0 m-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-        <TabsTrigger value="Cars" className="h-15 px-8 m-0 ">
+      <TabsList className=" h-15 p-0 m-0 grid grid-cols-2 sm:grid-cols-3  md:grid-cols-4 lg:grid-cols-6">
+        <TabsTrigger value="Cars" className="h-15 px-8 m-0 bg-slate-100 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
@@ -49,7 +49,7 @@ const tabs = () => {
             />
           </svg>
         </TabsTrigger>
-        <TabsTrigger value="Bike" className="h-15 px-8 m-0  ">
+        <TabsTrigger value="Bike" className="h-15 px-8 m-0  bg-slate-100 ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
@@ -75,7 +75,7 @@ const tabs = () => {
             </defs>
           </svg>
         </TabsTrigger>
-        <TabsTrigger value="Cycle" className="h-15 px-8 m-0  ">
+        <TabsTrigger value="Cycle" className="h-15 px-8 m-0 bg-slate-100  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
@@ -89,7 +89,7 @@ const tabs = () => {
             />
           </svg>
         </TabsTrigger>
-        <TabsTrigger value="Truck" className="h-15 px-8 m-0  ">
+        <TabsTrigger value="Truck" className="h-15 px-8 m-0 bg-slate-100  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
@@ -119,7 +119,7 @@ const tabs = () => {
             </defs>
           </svg>
         </TabsTrigger>
-        <TabsTrigger value="Wagon" className="h-15 px-8 m-0  ">
+        <TabsTrigger value="Wagon" className="h-15 px-8 m-0 bg-slate-100  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
@@ -145,7 +145,7 @@ const tabs = () => {
             </defs>
           </svg>
         </TabsTrigger>
-        <TabsTrigger value="Kashti" className="h-15 px-8 m-0  ">
+        <TabsTrigger value="Kashti" className="h-15 px-8 m-0 bg-slate-100  ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="45"
@@ -192,111 +192,185 @@ const tabs = () => {
           </svg>
         </TabsTrigger>
       </TabsList>
+      <div className=" relative bg-slate-100">
+        <TabsContent value="Cars" className="p-5 ">
+          <div className="flex flex-col lg:flex-row lg:gap-4 justify-between border-b-2 border-slate-300 py-4 ">
+            <div className="w-full lg:w-3/4  ">
+              <div className="flex flex-row lg:justify-between flex-wrap lg:flex-nowrap gap-4  lg:gap-4">
+                <Select>
+                  <SelectTrigger className="w-full sm:w-[48%] lg:w-1/5  bg-white border border-[#B8B8B8] rounded-[5px] h-12">
+                    <SelectValue placeholder="Make" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="Make1">Make1</SelectItem>
+                    <SelectItem value="Make2">Mak2</SelectItem>
+                    <SelectItem value="Make3">Make3</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Select>
+                  <SelectTrigger className="w-full sm:w-[48%] lg:w-1/5 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
+                    <SelectValue placeholder="Model" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="Model1">Model1</SelectItem>
+                    <SelectItem value="Model2">Model2</SelectItem>
+                    <SelectItem value="Model3">Model3</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Input
+                  type="text"
+                  className="sm:w-[48%] lg:w-1/5 border border-[#B8B8B8] rounded-[5px] h-12"
+                  placeholder="Variant"
+                />
+                <Button
+                  variant="outline"
+                  className="bg-[#003087] text-white font-light gap-2  w-full sm:w-[48%] lg:w-1/3  rounded-[5px] hover:bg-[#002f87bc] hover:text-white h-12"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 4.5v15m7.5-7.5h-15"
+                    />
+                  </svg>
+                  Add another vehicle
+                </Button>
+              </div>
+              <div className="flex flex-row lg:justify-between flex-wrap lg:flex-nowrap gap-4 my-3">
+                <div className="relative w-full sm:w-[48%] lg:w-1/6 rounded-md shadow-sm">
+                  <input
+                    type="text"
+                    name="price"
+                    id="price"
+                    className=" h-12 w-full   border-[#B8B8B8] py-1.5 pl-4  text-gray-900 ring-1 ring-inset ring-[#B8B8B8] placeholder:text-[#444]  sm:text-sm sm:leading-6 focus:outline-none rounded-[5px]"
+                    placeholder="Price from"
+                  />
 
-      <TabsContent value="Cars" className="p-5">
-        <div className="flex flex-col lg:flex-row lg:gap-4 justify-between border-b-2 border-slate-300 py-4 ">
-          <div className="w-full lg:w-3/4  ">
-            <div className="flex flex-row lg:justify-between flex-wrap lg:flex-nowrap gap-4  lg:gap-4">
-              <Select>
-                <SelectTrigger className="w-full sm:w-[48%] lg:w-1/5  bg-white border border-[#B8B8B8] rounded-[5px] h-12">
-                  <SelectValue placeholder="Make" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="Make1">Make1</SelectItem>
-                  <SelectItem value="Make2">Mak2</SelectItem>
-                  <SelectItem value="Make3">Make3</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select>
-                <SelectTrigger className="w-full sm:w-[48%] lg:w-1/5 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
-                  <SelectValue placeholder="Model" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="Model1">Model1</SelectItem>
-                  <SelectItem value="Model2">Model2</SelectItem>
-                  <SelectItem value="Model3">Model3</SelectItem>
-                </SelectContent>
-              </Select>
-              <Input
-                type="text"
-                className="sm:w-[48%] lg:w-1/5 border border-[#B8B8B8] rounded-[5px] h-12"
-                placeholder="Variant"
-              />
+                  <div className="absolute inset-y-0 right-[40px] flex items-center">
+                    <div className="pointer-events-none absolute inset-y flex items-center pl-3">
+                      <span className="text-gray-500 sm:text-sm">€</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="relative w-full sm:w-[48%]  lg:w-1/6 rounded-md shadow-sm">
+                  <input
+                    type="text"
+                    name="price"
+                    id="price"
+                    className=" w-full h-12  border-[#B8B8B8] py-1.5 pl-4  text-gray-900 ring-1 ring-inset ring-[#B8B8B8] placeholder:text-[#444]  sm:text-sm sm:leading-6 focus:outline-none rounded-[5px]"
+                    placeholder="Price up to"
+                  />
+
+                  <div className="absolute inset-y-0 right-[40px] flex items-center">
+                    <div className="pointer-events-none absolute inset-y flex items-center pl-3">
+                      <span className="text-gray-500 sm:text-sm">€</span>
+                    </div>
+                  </div>
+                </div>
+                <Select>
+                  <SelectTrigger className="w-full sm:w-[48%] lg:w-1/6 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
+                    <SelectValue placeholder="Year from" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Select>
+                  <SelectTrigger className="w-full sm:w-[48%] lg:w-1/6 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
+                    <SelectValue placeholder="Year up to" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Select>
+                  <SelectTrigger className="w-full sm:w-[48%] lg:w-1/4 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
+                    <SelectValue placeholder="Vehicle Type" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <div className="flex flex-row  lg:justify-between gap-4 flex-wrap lg:flex-nowrap  my-3">
+                <Select>
+                  <SelectTrigger className="w-full sm:w-[48%] lg:w-1/6 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
+                    <SelectValue placeholder="Fuel type" />
+                  </SelectTrigger>
+                  <SelectContent className="bg-white">
+                    <SelectItem value="light">Light</SelectItem>
+                    <SelectItem value="dark">Dark</SelectItem>
+                    <SelectItem value="system">Other</SelectItem>
+                  </SelectContent>
+                </Select>
+                <div className="w-full flex sm:w-[48%]  lg:w-[54%] bg-white border border-[#B8B8B8] rounded-[5px] h-12">
+                  <Input
+                    type="email"
+                    className=" lg:w-1/3 border-none  rounded-[5px] text-center h-12"
+                    placeholder="Payment type"
+                  />
+                  <Button
+                    variant="outline"
+                    className="bg-[#EF2C2E] text-white font-light gap-2 hover:bg-[#EF2C2E] hover:text-white  lg:w-1/3   border-none rounded-[5px] h-12"
+                  >
+                    Buy
+                  </Button>
+                  <Input
+                    type="email"
+                    className=" lg:w-1/3 border-none  rounded-[5px] text-center h-12"
+                    placeholder="Leasing"
+                  />
+                </div>
+                <Input
+                  type="text"
+                  className="w-full sm:w-[48%] lg:w-1/4 bg-white border border-[#B8B8B8] rounded-[5px] h-12"
+                  placeholder="City or ZIP Code"
+                />
+              </div>
+            </div>
+            <div className="w-full lg:w-1/4 gap-3 flex flex-col sm:flex-row lg:flex-col">
               <Button
                 variant="outline"
-                className="bg-[#003087] text-white font-light gap-2  w-full sm:w-[48%] lg:w-1/3  rounded-[5px] hover:bg-[#002f87bc] hover:text-white h-12"
+                className="bg-[#EF2C2E] text-white font-light gap-2 hover:bg-[#EF2C2E] hover:text-white w-full     border-none rounded-[5px] h-12"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  strokeWidth={1.5}
+                  stroke-width="1.5"
                   stroke="currentColor"
                   className="w-6 h-6"
                 >
                   <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 4.5v15m7.5-7.5h-15"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
                   />
                 </svg>
-                Add another vehicle
+                5.221.456 results
               </Button>
-            </div>
-            <div className="flex flex-row lg:justify-between flex-wrap lg:flex-nowrap gap-4 my-3">
-              <div className="relative w-full sm:w-[48%] lg:w-1/6 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="price"
-                  id="price"
-                  className=" h-12 w-full   border-[#B8B8B8] py-1.5 pl-4  text-gray-900 ring-1 ring-inset ring-[#B8B8B8] placeholder:text-[#444]  sm:text-sm sm:leading-6 focus:outline-none rounded-[5px]"
-                  placeholder="Price from"
-                />
-
-                <div className="absolute inset-y-0 right-[40px] flex items-center">
-                  <div className="pointer-events-none absolute inset-y flex items-center pl-3">
-                    <span className="text-gray-500 sm:text-sm">€</span>
-                  </div>
-                </div>
-              </div>
-              <div className="relative w-full sm:w-[48%]  lg:w-1/6 rounded-md shadow-sm">
-                <input
-                  type="text"
-                  name="price"
-                  id="price"
-                  className=" w-full h-12  border-[#B8B8B8] py-1.5 pl-4  text-gray-900 ring-1 ring-inset ring-[#B8B8B8] placeholder:text-[#444]  sm:text-sm sm:leading-6 focus:outline-none rounded-[5px]"
-                  placeholder="Price up to"
-                />
-
-                <div className="absolute inset-y-0 right-[40px] flex items-center">
-                  <div className="pointer-events-none absolute inset-y flex items-center pl-3">
-                    <span className="text-gray-500 sm:text-sm">€</span>
-                  </div>
-                </div>
-              </div>
+              <Button
+                variant="outline"
+                className="bg-white text-[#003087] border border-[#003087]  font-light gap-2 hover:bg-[#003087] hover:text-white w-full      rounded-[5px] h-12"
+              >
+                Save Search
+              </Button>
               <Select>
-                <SelectTrigger className="w-full sm:w-[48%] lg:w-1/6 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
-                  <SelectValue placeholder="Year from" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">Other</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select>
-                <SelectTrigger className="w-full sm:w-[48%] lg:w-1/6 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
-                  <SelectValue placeholder="Year up to" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">Other</SelectItem>
-                </SelectContent>
-              </Select>
-              <Select>
-                <SelectTrigger className="w-full sm:w-[48%] lg:w-1/4 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
-                  <SelectValue placeholder="Vehicle Type" />
+                <SelectTrigger className="bg-white text-[#003087] border border-[#003087] justify-center font-light gap-2 hover:bg-[#003087] hover:text-white w-full      rounded-[5px] h-12">
+                  <SelectValue placeholder="Chose filter " />
                 </SelectTrigger>
                 <SelectContent className="bg-white">
                   <SelectItem value="light">Light</SelectItem>
@@ -305,239 +379,166 @@ const tabs = () => {
                 </SelectContent>
               </Select>
             </div>
-            <div className="flex flex-row  lg:justify-between gap-4 flex-wrap lg:flex-nowrap  my-3">
-              <Select>
-                <SelectTrigger className="w-full sm:w-[48%] lg:w-1/6 bg-white border border-[#B8B8B8] rounded-[5px] h-12">
-                  <SelectValue placeholder="Fuel type" />
-                </SelectTrigger>
-                <SelectContent className="bg-white">
-                  <SelectItem value="light">Light</SelectItem>
-                  <SelectItem value="dark">Dark</SelectItem>
-                  <SelectItem value="system">Other</SelectItem>
-                </SelectContent>
-              </Select>
-              <div className="w-full flex sm:w-[48%]  lg:w-[54%] bg-white border border-[#B8B8B8] rounded-[5px] h-12">
-                <Input
-                  type="email"
-                  className=" lg:w-1/3 border-none  rounded-[5px] text-center h-12"
-                  placeholder="Payment type"
-                />
-                <Button
-                  variant="outline"
-                  className="bg-[#EF2C2E] text-white font-light gap-2 hover:bg-[#EF2C2E] hover:text-white  lg:w-1/3   border-none rounded-[5px] h-12"
-                >
-                  Buy
-                </Button>
-                <Input
-                  type="email"
-                  className=" lg:w-1/3 border-none  rounded-[5px] text-center h-12"
-                  placeholder="Leasing"
-                />
+          </div>
+          <div className="flex flex-col flex-wrap lg:flex-row lg:flex-nowrap  w-full gap-4 py-4">
+            <div className="w-full lg:w-1/4">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Number of seats
+              </Label>
+              <div className=" flex flex-row gap-2 justify-between">
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"Form"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"To"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
               </div>
-              <Input
-                type="text"
-                className="w-full sm:w-[48%] lg:w-1/4 bg-white border border-[#B8B8B8] rounded-[5px] h-12"
-                placeholder="City or ZIP Code"
+            </div>
+
+            <div className="w-full lg:w-1/4">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Number of doors
+              </Label>
+              <Secloter
+                options={options}
+                selectedItem={selectedItem}
+                defaultoption={"4"}
+                onItemSelect={handleItemSelect}
               />
             </div>
-          </div>
-          <div className="w-full lg:w-1/4 gap-3 flex flex-col sm:flex-row lg:flex-col">
-            <Button
-              variant="outline"
-              className="bg-[#EF2C2E] text-white font-light gap-2 hover:bg-[#EF2C2E] hover:text-white w-full     border-none rounded-[5px] h-12"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                className="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                />
-              </svg>
-              5.221.456 results
-            </Button>
-            <Button
-              variant="outline"
-              className="bg-white text-[#003087] border border-[#003087]  font-light gap-2 hover:bg-[#003087] hover:text-white w-full      rounded-[5px] h-12"
-            >
-              Save Search
-            </Button>
-            <Select>
-              <SelectTrigger className="bg-white text-[#003087] border border-[#003087] justify-center font-light gap-2 hover:bg-[#003087] hover:text-white w-full      rounded-[5px] h-12">
-                <SelectValue placeholder="Chose filter " />
-              </SelectTrigger>
-              <SelectContent className="bg-white">
-                <SelectItem value="light">Light</SelectItem>
-                <SelectItem value="dark">Dark</SelectItem>
-                <SelectItem value="system">Other</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-        </div>
-        <div className="flex flex-col flex-wrap lg:flex-row lg:flex-nowrap  w-full gap-4 py-4">
-          <div className="w-full lg:w-1/4">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Number of seats
-            </Label>
-            <div className=" flex flex-row gap-2 justify-between">
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"Form"}
-                  onItemSelect={handleItemSelect}
-                />
-              </div>
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"To"}
-                  onItemSelect={handleItemSelect}
-                />
+            <div className="w-full lg:w-1/4">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Type and condition
+              </Label>
+              <Secloter
+                options={options}
+                selectedItem={selectedItem}
+                defaultoption={"Any"}
+                onItemSelect={handleItemSelect}
+              />
+            </div>
+            <div className="w-full lg:w-1/4 ">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Power
+              </Label>
+              <div className="flex flex-row gap-2 justify-between">
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"Form"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"Up To"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
               </div>
             </div>
           </div>
+          <div className="flex flex-col  flex-wrap lg:flex-row lg:flex-nowrap border-b-2 border-slate-300 mb-12  w-full gap-4 pb-4">
+            <div className="w-full lg:w-1/4">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Leasing Duration
+              </Label>
+              <div className=" flex flex-row gap-2 justify-between">
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"Form"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"To"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
+              </div>
+            </div>
 
-          <div className="w-full lg:w-1/4">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Number of doors
-            </Label>
-            <Secloter
-              options={options}
-              selectedItem={selectedItem}
-              defaultoption={"4"}
-              onItemSelect={handleItemSelect}
-            />
-          </div>
-          <div className="w-full lg:w-1/4">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Type and condition
-            </Label>
-            <Secloter
-              options={options}
-              selectedItem={selectedItem}
-              defaultoption={"Any"}
-              onItemSelect={handleItemSelect}
-            />
-          </div>
-          <div className="w-full lg:w-1/4 ">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Power
-            </Label>
-            <div className="flex flex-row gap-2 justify-between">
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"Form"}
-                  onItemSelect={handleItemSelect}
-                />
-              </div>
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"Up To"}
-                  onItemSelect={handleItemSelect}
-                />
+            <div className="w-full lg:w-1/4">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Leasing Kilometers per year
+              </Label>
+              <Secloter
+                options={options}
+                selectedItem={selectedItem}
+                defaultoption={"4"}
+                onItemSelect={handleItemSelect}
+              />
+            </div>
+            <div className="w-full lg:w-1/4">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Origin of the vehicle
+              </Label>
+              <Secloter
+                options={options}
+                selectedItem={selectedItem}
+                defaultoption={"Any"}
+                onItemSelect={handleItemSelect}
+              />
+            </div>
+            <div className="w-full lg:w-1/4 ">
+              <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
+                Ownership
+              </Label>
+              <div className="flex flex-row gap-2 justify-between">
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"Form"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
+                <div className="w-[48%]">
+                  <Secloter
+                    options={options}
+                    selectedItem={selectedItem}
+                    defaultoption={"Up To"}
+                    onItemSelect={handleItemSelect}
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="flex flex-col  flex-wrap lg:flex-row lg:flex-nowrap border-b-2 border-slate-300 mb-12  w-full gap-4 pb-4">
-          <div className="w-full lg:w-1/4">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Leasing Duration
-            </Label>
-            <div className=" flex flex-row gap-2 justify-between">
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"Form"}
-                  onItemSelect={handleItemSelect}
-                />
-              </div>
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"To"}
-                  onItemSelect={handleItemSelect}
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full lg:w-1/4">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Leasing Kilometers per year
-            </Label>
-            <Secloter
-              options={options}
-              selectedItem={selectedItem}
-              defaultoption={"4"}
-              onItemSelect={handleItemSelect}
-            />
-          </div>
-          <div className="w-full lg:w-1/4">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Origin of the vehicle
-            </Label>
-            <Secloter
-              options={options}
-              selectedItem={selectedItem}
-              defaultoption={"Any"}
-              onItemSelect={handleItemSelect}
-            />
-          </div>
-          <div className="w-full lg:w-1/4 ">
-            <Label htmlFor="" className="space-x-0 font-semibold text-[13px]">
-              Ownership
-            </Label>
-            <div className="flex flex-row gap-2 justify-between">
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"Form"}
-                  onItemSelect={handleItemSelect}
-                />
-              </div>
-              <div className="w-[48%]">
-                <Secloter
-                  options={options}
-                  selectedItem={selectedItem}
-                  defaultoption={"Up To"}
-                  onItemSelect={handleItemSelect}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </TabsContent>
-      <TabsContent value="Bike" className="p-5">
-        Change your Bike here.
-      </TabsContent>
-      <TabsContent value="Cycle" className="p-5">
-        Change your Cycle here.
-      </TabsContent>
-      <TabsContent value="Truck" className="p-5">
-        Change your Truck here.
-      </TabsContent>
-      <TabsContent value="Wagon" className="p-5">
-        Change your Wagon here.
-      </TabsContent>
-      <TabsContent value="Kashti" className="p-5">
-        Change your Kashti here.
-      </TabsContent>
+        </TabsContent>
+        <TabsContent value="Bike" className="p-5">
+          Change your Bike here.
+        </TabsContent>
+        <TabsContent value="Cycle" className="p-5">
+          Change your Cycle here.
+        </TabsContent>
+        <TabsContent value="Truck" className="p-5">
+          Change your Truck here.
+        </TabsContent>
+        <TabsContent value="Wagon" className="p-5">
+          Change your Wagon here.
+        </TabsContent>
+        <TabsContent value="Kashti" className="p-5">
+          Change your Kashti here.
+        </TabsContent>
+      </div>
     </Tabs>
   );
 };

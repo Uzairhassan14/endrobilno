@@ -8,7 +8,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ title, onClick }) => {
   return (
     <button
-      className="bg-[#FFFFFF26] p-1 w-[11rem] sm:w-[14.375rem] shrink-0 rounded-md  text-lora font-normal text-base focus:outline-none h-[3.8rem] text-white"
+      className="bg-[#FFFFFF26] p-1 w-[11rem] sm:w-[14.375rem] shrink-0 rounded-[5px]  font-Lora font-normal text-base focus:outline-none h-[3.8rem] text-white"
       onClick={onClick}
     >
       {title}

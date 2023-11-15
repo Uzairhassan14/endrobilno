@@ -10,8 +10,6 @@ import Image from "next/image";
 import AppStore from "@/app/_component/assets/AppStoreBanner.png";
 import Googleplay from "@/app/_component/assets/GooglePlayBanner.png";
 
-import Secloter from "@/app/_component/footer/Secloter";
-
 const footer = () => {
   return (
     <>
@@ -20,7 +18,7 @@ const footer = () => {
           <h1 className="text-[1.8rem] xl:text-[2rem]   font-lora not-italic text-white font-semibold leading-noraml">
             The Most wanted makes and models
           </h1>
-          <div className="flex flex-row flex-wrap gap-2 justify-center sm:justify-start sm:flex-row  sm:flex-wrap   mt-14">
+          <div className="flex flex-row flex-wrap gap-2 justify-start sm:justify-start sm:flex-row  sm:flex-wrap   mt-14">
             <Button title={"Audi A4"} />
             <Button title={"Volkswagen"} />
             <Button title={"Skota Octavia"} />
@@ -164,7 +162,7 @@ const footer = () => {
               <Youtube />
             </div>
           </div>
-          <div className="flex mt-12 flex-wrap sm:flex-nowrap xl:justify-end">
+          <div className="flex justify-between sm:justify-start  mt-12  sm:flex-nowrap xl:justify-end">
             <Image src={AppStore} alt="AppStore" />
             <Image src={Googleplay} alt="Googleplay" />
           </div>

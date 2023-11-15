@@ -80,7 +80,7 @@ const SmallCard = ({
       <Image
         alt={title}
         src={imageSrc}
-        className={`h-56 w-full rounded-[10px] object-cover ${classname}`}
+        className={`h-full  md:h-56 w-full rounded-[10px] object-cover ${classname}`}
       />
 
       <div className="mt-3 px-4 pb-5">

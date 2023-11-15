@@ -1,6 +1,4 @@
 import React from "react";
-import Navbar from "@/app/_component/navbar/nabar";
-import Footer from "@/app/_component/footer/footer";
 import Image from "next/image";
 import mainCar from "@/app/_component/assets/main-car.png";
 import SmallCard from "@/app/_component/carsCards/smallCard";
@@ -17,10 +15,10 @@ const page = () => {
             alt="main-car"
           />
         </div>
+        <div className="mt-[-150px]">
+          <Tab />
+        </div>
       </header>
-      <section>
-        <Tab />
-      </section>
     </section>
   );
 };
